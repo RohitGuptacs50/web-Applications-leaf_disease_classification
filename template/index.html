@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Disease Prediction</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Tooplate">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+
+        <!-- MAIN CSS -->
+
+    </head>
+
+
+
+
+
+    <h2>Uplaod Image for Classification</h2>
+
+        
+        <br>
+    
+        <form method="post" enctype="multipart/form-data" action="predictImage">
+    
+            {% csrf_token %}
+            <div class="col-md-4 col-sm-4"><label for="fname">Upload Image File Here:</label> </div> <input name="filePath" type="file"><br><br>
+            <br>
+
+            
+            <input type="submit" value="Submit" ></div>
+
+            <h2>The classification of the image is {{predictedLabel}}</h2>
+ <img src={{filePathName}} alt='imagename'>
+ {{filePathName}}
+
+        </form>
+        <br>
+
+</html>
